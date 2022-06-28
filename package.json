@@ -16,7 +16,7 @@
     "bugs": {
       "url": "https://github.com/markmcdnyu/README-Generator/issues"
     },
-    "homepage": "https://github.com/markmcdnyu/README-Generator#readme",
+    "homepage": "https://github.com/73gs514/README-Generator",
     "dependencies": {
       "inquirer": "^7.2.0"
     }
