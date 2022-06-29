@@ -1,87 +1,80 @@
-// Declaring the dependencies and variables
-const fs = require("fs");
-const util = require("util");
-const inquirer = require("inquirer");
-const generateReadme = require("./utils/generateReadme")
-const writeFileAsync = util.promisify(fs.writeFile);
 
-//Prompt the user questions to populate the README.md
-function promptUser(){
-    return inquirer.prompt([
-        {
-            type: "input",
-            name: "projectTitle",
-            message: "What is the project title?",
-        },
-        {
-            type: "input",
-            name: "description",
-            message: "Write a brief description of your project: "
-        },
-        {
-            type: "input",
-            name: "installation",
-            message: "Describe the installation process if any: ",
-        },
-        {
-            type: "input",
-            name: "usage",
-            message: "What is this project usage for?"
-        },
-        {
-            type: "list",
-            name: "license",
-            message: "Chose the appropriate license for this project: ",
-            choices: [
-                "Apache",
-                "Academic",
-                "GNU",
-                "ISC",
-                "MIT",
-                "Mozilla",
-                "Open"
-            ]
-        },
-        {
-            type: "input",
-            name: "contributing",
-            message: "Who are the contributors of this projects?"
-        },
-        {
-            type: "input",
-            name: "tests",
-            message: "Is there a test included?"
-        },
-        {
-            type: "input",
-            name: "questions",
-            message: "What do I do if I have an issue? "
-        },
-        {
-            type: "input",
-            name: "username",
-            message: "Please enter your GitHub username: "
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "Please enter your email: "
-        }
-    ]);
-} 
+const fs = require('fs');
+const path = require('path');
+const { prompt } = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-// Async function using util.promisify 
-  async function init() {
-    try {
-        // Ask user questions and generate responses
-        const answers = await promptUser();
-        const generateContent = generateReadme(answers);
-        // Write new README.md to dist directory
-        await writeFileAsync('./dist/README.md', generateContent);
-        console.log('✔️  Successfully wrote to README.md');
-    }   catch(err) {
-        console.log(err);
+const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?'
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'What is the description of your project?'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you install your project?'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What is the usage of your project?'
+    },
+    {
+        type: 'input',
+        name: 'authors',
+        message: 'Who are the authors of your project? (Please separate authors by comma)'
+    },
+    {
+        type: 'input',
+        name: 'contact',
+        message: 'What is the email of the leader of this project?'
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What is the license of your project?',
+        choices: ["MIT", "Apache 2.0", "BSD 3.0", "none"]
+    },
+    {
+        type: 'input',
+        name: 'report',
+        message: 'How does one report issues?'
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'How does one make contributions?'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What are the test instructions?'
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: 'What is your GitHub username?'
     }
-  }
-  
-  init();  
+];
+
+
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(__dirname, "/example/", fileName), data)
+}
+
+
+function init() {
+    prompt(questions).then(answers => {
+        console.log(answers);
+        writeToFile("README.md", generateMarkdown((answers)));
+    })
+}
+
+
+init();

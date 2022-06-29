@@ -8,9 +8,9 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/jpd61/README-generator.git"
+      "url": "git+https://github.com/73gs514/README-Generator.git"
     },
-    "author": "Joseph DeWoody",
+    "author": "Brian Soares",
     "license": "ISC",
     "bugs": {
       "url": "https://github.com/73gs514/README-Generator/issues"
