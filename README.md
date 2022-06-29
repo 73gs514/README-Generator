@@ -19,6 +19,5 @@
 
 
 ## Link
-* [README Generator](https://73gs514.github.io/README-Generator/)
 
 * [Demo](https://drive.google.com/file/d/1Sz2ZsfGUbpFcdWyv7Z2kByvIKpsZgauV/view?usp=sharing)
