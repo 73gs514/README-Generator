@@ -4,20 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/73gs514/ReadMe-Generator-homework.git"
+        "type": "git",
+        "url": "git+https://github.com/73gs514/ReadMe-Generator.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/73gs514/ReadMe-Generator-homework/issues"
+        "url": "https://github.com/73gs514/ReadMe-Generator/issues"
     },
-    "homepage": "https://github.com/73gs514/ReadMe-Generator-homework#readme",
+    "homepage": "https://github.com/73gs514/ReadMe-Generator#readme",
     "dependencies": {
-      "inquirer": "^8.2.4"
+        "inquirer": "^8.2.4"
     }
-  }
+}
