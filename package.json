@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
     },
     "repository": {
         "type": "git",
@@ -19,5 +20,8 @@
     "homepage": "https://github.com/73gs514/ReadMe-Generator#readme",
     "dependencies": {
         "inquirer": "^8.2.4"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
     }
 }
