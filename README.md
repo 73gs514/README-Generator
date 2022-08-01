@@ -1,23 +1,48 @@
-# README-Generator
+# README Generator
 
-## Description
-* GIVEN a command-line application that accepts user input
-* WHEN I am prompted for information about my application repository
-* THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-* WHEN I enter my project title
-* THEN this is displayed as the title of the README
-* WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-* THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-* WHEN I choose a license for my application from a list of options
-* THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-* WHEN I enter my GitHub username
-* THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-* WHEN I enter my email address
-* THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-* WHEN I click on the links in the Table of Contents
-* THEN I am taken to the corresponding section of the README
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## Table-of-Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
+
+## [Description](#table-of-contents)
+
+This application allows user to create a quality README file based on a series of questions using Node.js
+
+## [Installation](#table-of-contents)
+
+Users must clone this repository and make sure node is installed on computer. The inquirer module will need to be installed as well.
+
+## [Usage](#table-of-contents)
+
+from the command line in the users terminal using node, a user will be asked a series of questions in order to generate a quality README. After questions are completed, a README.md file will be generated on the users computer. After README is generated, the user may add additonal information and screenshots as needed.
+
+### Link to Demo Video:
 
 
-## Link
+## [Contributing](#table-of-contents)
 
-* [Demo](https://drive.google.com/file/d/1Sz2ZsfGUbpFcdWyv7Z2kByvIKpsZgauV/view?usp=sharing)
+Contributors can see install instructions or contact me with the information below.
+
+## [Tests](#table-of-contents)
+
+npm test
+
+## [License](#table-of-contents)
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## [Questions](#table-of-contents)
+
+If you have any questions about this project, please contact me using the following links:
+
+[GitHub](https://github.com/73gs514)
+
+[Email: 73gs514@gmail.com](mailto:73gs514@gmail.com)

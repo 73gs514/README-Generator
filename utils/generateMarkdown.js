@@ -1,43 +1,77 @@
-//function to generate the markdown here
-function generateMarkdown(data) {
-    return `
-# Project Title
-${data.title}
-
-
-# Description
-${data.description}
-
-# Table of Contents 
-* [Installation](#-Installation)
-* [Usage](#-Usage)
-* [License](#-Installation)
-* [Contributing](#-Contributing)
-* [Tests](#-Tests)
-* [Questions](#-Contact-Information)
+// Function to render license badge
+function renderLicenseBadge(license) {
+    if (license !== 'no license') {
+      return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+      } else{
+        return '';
+      }
+    } 
+  
+  // Function to render license link
+  function renderLicenseLink(license) {
+    if (license !== 'no license') {
+      return `[${license}](https://choosealicense.com/licenses/${license})`;
+      } else {
+        return ' ';
+      }
+  }
+  
+  // Function to render license section
+  function renderLicenseSection(license) {
+    if (license !== 'no license') {
+      return `
+      ## [License](#table-of-contents)
+      The application is covered under the following license:
+      ${renderLicenseLink(license)}
+        `;
+      } else {
+        return ' ';
+      }
+  }
+  
+  // Funtion to generate README markdown
+  function generateMarkdown(data) {
+  
+    return `# ${data.title}
+  
+    ${renderLicenseBadge(data.license)}
+  
+    ## Table-of-Contents
+    * [Description](#description)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [License](#license)
+    * [Questions](#questions)
+  
+    ## [Description](#table-of-contents) 
+    ${data.description}
+  
+    ## [Installation](#table-of-contents) 
+    ${data.installation}
     
-# Installation
-${data.installation}
-
-# Usage
-${data.usage}
-
-# License 
-${data.license}
-* As this license list was not comprehensive, if you need another license, use the contact information below to ask for license to be added. 
-
-# Contributing 
-${data.contribute}
-
-# Tests
-${data.tests}
-
-# Contact Information 
-* GitHub Username: ${data.username}
-* Contact Email: ${data.email}
-
-`;
-}
-
-//Export the generateMarkdown function 
-module.exports = generateMarkdown;
+    ## [Usage](#table-of-contents) 
+    ${data.usage}
+  
+    ## [Contributing](#table-of-contents)
+    ${data.contributing}
+  
+    ## [Tests](#table-of-contents)
+    ${data.tests}
+  
+    ## [License](#table-of-contents)
+    ${renderLicenseBadge(data.license)}
+    
+    ## [Questions](#table-of-contents)
+  
+    If you have any questions about this project, please contact me using the following links:
+  
+    [GitHub](https://github.com/${data.github})
+  
+    [Email: ${data.email}](mailto:${data.email})
+  `;
+  }
+  
+  // Allows index to import markdown
+  module.exports = generateMarkdown;
