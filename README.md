@@ -25,7 +25,7 @@ Users must clone this repository and make sure node is installed on computer. Th
 from the command line in the users terminal using node, a user will be asked a series of questions in order to generate a quality README. After questions are completed, a README.md file will be generated on the users computer. After README is generated, the user may add additonal information and screenshots as needed.
 
 ### Link to Demo Video:
-https://drive.google.com/file/d/1zoeTMfEeTyDxY5Xm1vQlCxEppBdMh3SZ/view
+https://drive.google.com/file/d/1aX36Dk8PciDZSznCoyT5eo_u1V9qXPSc/view
 
 ## [Contributing](#table-of-contents)
 
